@@ -22,3 +22,6 @@ __pycache__/
 
 # 忽略在线组件文件夹
 managed_components/
+
+#忽略
+dependencies.lock

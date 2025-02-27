@@ -2,7 +2,7 @@ dependencies:
   esp_lvgl_port:
     dependencies: []
     source:
-      path: /home/nixy/esp-code/v5.4/demo3/components/esp_lvgl_port
+      path: /home/nixy/esp-code/v5.4/M5CoreS3_UserDemo/components/esp_lvgl_port
       type: local
     version: 2.4.3
   espressif/cmake_utilities:
@@ -57,19 +57,19 @@ dependencies:
       type: service
     version: 1.1.2
   espressif/esp_lcd_touch_ft5x06:
-    component_hash: 00a8c8e846faa99a476091a45e47fbf3e9b6d303bacb849553ac01510d52d7eb
+    component_hash: abaec05f46a793549b60afdda9eff86e3c8e87782c8c169007911232388d2858
     dependencies:
-    - name: idf
-      require: private
-      version: '>=4.4.2'
     - name: espressif/esp_lcd_touch
       registry_url: https://components.espressif.com
       require: public
       version: ^1.0.4
+    - name: idf
+      require: private
+      version: '>=4.4.2'
     source:
       registry_url: https://components.espressif.com/
       type: service
-    version: 1.0.6~1
+    version: 1.0.7
   espressif/onewire_bus:
     component_hash: c4c781940d8bd988432b47ac3ee68479c69e14e01fdfba0b61365b233a3ba5d6
     dependencies:

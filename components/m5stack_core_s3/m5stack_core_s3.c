@@ -610,7 +610,7 @@ camera_fb_t* bsp_camera_fb_get()
 	}
 
 	if(xTaskGetTickCount() - camera_last_frame_tick < (1000 / BSP_CAMERA_FPS_MAX)){
-		ESP_LOGE(TAG, "Camera FPS too high");
+		ESP_LOGD(TAG, "Camera FPS too high");
 		xSemaphoreGive(camera_lock);
 		return NULL;
 	}
