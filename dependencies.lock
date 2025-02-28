@@ -2,7 +2,7 @@ dependencies:
   esp_lvgl_port:
     dependencies: []
     source:
-      path: /home/nixy/esp-code/v5.4/M5CoreS3_UserDemo/components/esp_lvgl_port
+      path: /home/nixy/esp-code/v5.4/M5CoreS3-UserDemo/components/esp_lvgl_port
       type: local
     version: 2.4.3
   espressif/cmake_utilities:
