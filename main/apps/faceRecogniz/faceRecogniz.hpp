@@ -46,7 +46,7 @@ private:
 
 	const char* _tag = "APP 人脸识别";
 
-	const uint32_t  DL_OUT_W = 240;
+	const uint32_t  DL_OUT_W = 320;
 	const uint32_t  DL_OUT_H = 240;
 	const uint32_t  DL_RECOG_INTERVAL = 1000;
 
@@ -56,7 +56,7 @@ private:
 
 	volatile TickType_t _lastTick = 0;
 
-	HumanFaceDetectMSR01 detector;
+	HumanFaceDetectMSR01 detector1;
 	HumanFaceDetectMNP01 detector2;
 	FaceRecognition112V1S8 recognizer;
 
