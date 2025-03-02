@@ -1,4 +1,14 @@
 dependencies:
+  cfscn/sensorlib:
+    component_hash: 8832ce734fbf5ce61757491d2aa8b2a2a52c6abf38cec512f8bf18c7e070517a
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 0.2.2
   esp_lvgl_port:
     dependencies: []
     source:
@@ -92,6 +102,7 @@ dependencies:
       type: service
     version: 9.2.2
 direct_dependencies:
+- cfscn/sensorlib
 - espressif/cmake_utilities
 - espressif/esp32-camera
 - espressif/esp_codec_dev
@@ -101,6 +112,6 @@ direct_dependencies:
 - espressif/onewire_bus
 - idf
 - lvgl/lvgl
-manifest_hash: 14b25051f5b8a8279927a05908cc5d33dea091d3e3b2564ef63f24717ed1c0e6
+manifest_hash: c476daaa5716d87ff2bc82e569b19ce999c160aff10625eb3b370b6a85614edc
 target: esp32s3
 version: 2.0.0

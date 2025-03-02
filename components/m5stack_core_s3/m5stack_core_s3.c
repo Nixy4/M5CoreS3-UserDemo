@@ -17,14 +17,13 @@
 #include "esp_lcd_panel_vendor.h"
 #include "esp_lcd_panel_ops.h"
 #include "esp_vfs_fat.h"
-
 #include "esp_lcd_ili9341.h"
 #include "esp_lcd_touch_ft5x06.h"
-#include "bsp_err_check.h"
 #include "esp_codec_dev_defaults.h"
 #include "esp_camera.h"
 
 #include "bsp/m5stack_core_s3.h"
+#include "bsp_err_check.h"
 #include "bsp/display.h"
 #include "bsp/touch.h"
 

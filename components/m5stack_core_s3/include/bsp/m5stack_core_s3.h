@@ -79,8 +79,6 @@
 #define BSP_CAMERA_D6        (GPIO_NUM_48)
 #define BSP_CAMERA_D7        (GPIO_NUM_47)
 
-
-
 /* SD card */
 #define BSP_SD_MOSI           (GPIO_NUM_37)
 #define BSP_SD_MISO           (GPIO_NUM_35)

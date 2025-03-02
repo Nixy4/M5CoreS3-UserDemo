@@ -1,0 +1,5 @@
+targets:
+  - esp32s3
+
+dependencies:
+  cfscn/sensorlib : "0.2.2"

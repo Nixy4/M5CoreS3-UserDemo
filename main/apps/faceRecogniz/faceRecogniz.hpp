@@ -6,7 +6,6 @@
 #include <thread>
 //*Driver
 #include "sdkconfig.h"
-#include "bsp/esp-bsp.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/semphr.h"
@@ -18,6 +17,10 @@
 #include "esp_lcd_panel_vendor.h"
 #include "esp_lcd_panel_ops.h"
 #include "esp_camera.h"
+//*Device
+#include "bsp/esp-bsp.h"
+// #include "M5CoreS3.hpp"
+
 //*Middleware
 #include "lvgl.h"
 #include "mooncake.h"
@@ -44,12 +47,12 @@ class AppFaceRecogniz : public AppAbility
 {
 private:
 
-	const char* _tag = "APP 人脸识别";
-
-	const uint32_t  DL_OUT_W = 320;
-	const uint32_t  DL_OUT_H = 240;
+	const char* TAG                   = "APP 人脸识别";
+	const uint32_t  DL_OUT_W          = 320;
+	const uint32_t  DL_OUT_H          = 240;
 	const uint32_t  DL_RECOG_INTERVAL = 1000;
 
+	// M5CoreS3*    _core      = nullptr;
 	lv_obj_t*    _lvoScr    = nullptr;
 	lv_obj_t*    _lviCam    = nullptr;
 	lv_img_dsc_t _lvidscCam = {0};
@@ -64,6 +67,7 @@ private:
 	
 public:
 	AppFaceRecogniz();
+	// AppFaceRecogniz(M5CoreS3* core);
 	void onCreate();
 	void onRunning();
 	void onDestroy();

@@ -8,14 +8,16 @@ void AppFaceRecogniz::uint16_swap(uint16_t* buf, size_t w, size_t h)
 }
 
 AppFaceRecogniz::AppFaceRecogniz() : detector1(0.3F,0.3F,10,0.3F), detector2(0.4F,0.3F,10), recognizer()
+// AppFaceRecogniz::AppFaceRecogniz(M5CoreS3* core) : detector1(0.3F,0.3F,10,0.3F), detector2(0.4F,0.3F,10), recognizer()
 {
-	ESP_LOGI(_tag, "on construct\n");
-	setAppInfo().name = _tag;
+	// _core = core;
+	ESP_LOGI(TAG, "on construct\n");
+	setAppInfo().name = TAG;
 }
 
 void AppFaceRecogniz::onCreate()
 {
-	ESP_LOGI(_tag, "onCreate\n");
+	ESP_LOGI(TAG, "onCreate\n");
 	bsp_camera_init(FRAMESIZE_QVGA);
 	recognizer.set_partition(ESP_PARTITION_TYPE_DATA, ESP_PARTITION_SUBTYPE_ANY, "fr");
 	recognizer.set_ids_from_flash();
@@ -38,7 +40,7 @@ void AppFaceRecogniz::onCreate()
 
 void AppFaceRecogniz::onRunning()
 {
-	ESP_LOGI(_tag, "onRunning: %p %p %p\n", _lvoScr, _lviCam, _lvidscCam.data);
+	ESP_LOGI(TAG, "onRunning: %p %p %p\n", _lvoScr, _lviCam, _lvidscCam.data);
 	camera_fb_t* frame = bsp_camera_fb_get();//!
 	if (frame != NULL) 
 	{
@@ -73,7 +75,7 @@ void AppFaceRecogniz::onRunning()
 
 void AppFaceRecogniz::onDestroy()
 {
-	ESP_LOGI(_tag, "onDestroy\n");
+	ESP_LOGI(TAG, "onDestroy\n");
 	free((void*)_lvidscCam.data);
 	detector1.~HumanFaceDetectMSR01();
 	detector2.~HumanFaceDetectMNP01();

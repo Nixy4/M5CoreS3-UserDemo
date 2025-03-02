@@ -11,6 +11,7 @@ set(include_dirs
 
 set(requires        
   mooncake
+  M5CoreS3-UserBSP
   )
 
 idf_component_register(

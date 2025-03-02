@@ -2226,6 +2226,13 @@ CONFIG_MDNS_PREDEF_NETIF_ETH=y
 # end of mDNS
 
 #
+# SensorLib Configuration
+#
+CONFIG_SENSORLIB_ESP_IDF_NEW_API=y
+# CONFIG_SENSORLIB_ESP_IDF_OLD_API is not set
+# end of SensorLib Configuration
+
+#
 # CMake Utilities
 #
 # CONFIG_CU_RELINKER_ENABLE is not set
