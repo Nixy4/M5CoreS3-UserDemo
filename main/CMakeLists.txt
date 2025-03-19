@@ -1,12 +1,13 @@
 set(src_dirs        
   . 
   ./apps/faceRecogniz
-  ./hal)
+  # ./hal
+  )
 
 set(include_dirs    
   . 
   ./apps/faceRecogniz
-  ./hal
+  # ./hal
   )
 
 set(requires        
